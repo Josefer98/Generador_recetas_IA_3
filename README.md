@@ -74,18 +74,21 @@ es un software basado en inteligencia artificial que reconoce alimentos mediante
 Ambos notebooks estarán disponibles en la carpeta `/docs/`.
 ### 📁  Estructura de Carpetas 
 ```plaintext
-mi-proyecto/
-├── app/                  # Código principal de la aplicación
-│   ├── routes/           # Rutas de Flask
-│   ├── static/           # Archivos estáticos (CSS, JS, imágenes)
-│   ├── templates/        # Archivos HTML (Jinja2)
-│   └── __init__.py       # Inicialización de la app
-├── models/               # Modelos entrenados o scripts relacionados
-├── scripts/              # Scripts de entrenamiento, análisis, etc.
-├── .env                  # Variables de entorno (no subir a Git)
-├── requirements.txt      # Dependencias del proyecto
-├── README.md             # Documentación del proyecto
-└── main.py               # Punto de entrada principal
+📁 SmartRecipeAI/
+├── backend/               # Servidor Flask
+│   ├── app.py             # Código principal del servidor
+│   ├── yolov8n.pt         # Modelo entrenado YOLOv8
+│   ├── .env               # Claves de entorno
+│   ├── requirements.txt   # Librerías necesarias
+│   └── ...
+├── mobile_app/            # Aplicación Flutter
+│   ├── lib/
+│   ├── android/
+│   └── pubspec.yaml
+├── docs/                  # Notebooks en Colab
+│   ├── entrenamiento_yolo.ipynb
+│   └── calibracion_depth.ipynb
+└── README.md              # Este archivo
 ```
 ## 🌐 Backend: Requisitos y Ejecución
 
@@ -108,7 +111,7 @@ requests==2.31.0
 matplotlib==3.8.4
 scipy==1.13.1
 openai==1.30.1
-### Instalaciones Necesarias 
+### 📦 Instalaciones y ejecucion 
 🧰 Comandos de instalación por librería
 🟦 Flask (servidor web)
 ```bash
@@ -123,20 +126,36 @@ pip install requests==2.31.0
 pip install scipy==1.13.1
 pip install openai==1.30.1
 ```
-#Estrura de carpetas
+### Posteriormente instala un entorno virtual en la caperta donde quieras ejecutar el Servidor
+```bash
+python -m venv venv
+```
+### reuerda generar tu api key en https://platform.openai.com/docs/overview
+### crea un archivo .env donde se guardo la carpeta de el servidor y copia tu api key generada
+### ejecuta el servidor 
+```bash
+python app.py
+```
+### copia la ip generada para que el cliente se pueda conectar 
 
-📁 SmartRecipeAI/
-├── backend/               # Servidor Flask
-│   ├── app.py             # Código principal del servidor
-│   ├── yolov8n.pt         # Modelo entrenado YOLOv8
-│   ├── .env               # Claves de entorno
-│   ├── requirements.txt   # Librerías necesarias
-│   └── ...
-├── mobile_app/            # Aplicación Flutter
-│   ├── lib/
-│   ├── android/
-│   └── pubspec.yaml
-├── docs/                  # Notebooks en Colab
-│   ├── entrenamiento_yolo.ipynb
-│   └── calibracion_depth.ipynb
-└── README.md              # Este archivo
+## 📱 Aplicación Móvil: Requisitos y Ejecución
+La carpeta aplicaionmovil/ contiene la app Flutter que interactúa con el servidor Flask.
+
+## 📦 Requisitos
+-Flutter SDK instalado (https://docs.flutter.dev/get-started/install)
+-Android Studio o dispositivo Android
+-Conexión al servidor Flask local
+### 📦 Instalaciones y ejecucion 
+### recuerda verificar si tienes todo instalado ejecutando esto en la carpeta
+```bash
+flutter doctor
+```
+### posteriormente ejecutar
+```bash
+flutter pub get
+```
+### recuerda tener o cambiar el la ip de el servidor
+### ejecuta para correr la aplicación
+```bash
+flutter run
+```
