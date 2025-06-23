@@ -72,7 +72,21 @@ es un software basado en inteligencia artificial que reconoce alimentos mediante
 - A partir de la estimación de profundidad monocular, se calcularon porciones y calorías usando tablas nutricionales estáticas.
 
 Ambos notebooks estarán disponibles en la carpeta `/docs/`.
-
+### 📁  Estructura de Carpetas 
+```plaintext
+mi-proyecto/
+├── app/                  # Código principal de la aplicación
+│   ├── routes/           # Rutas de Flask
+│   ├── static/           # Archivos estáticos (CSS, JS, imágenes)
+│   ├── templates/        # Archivos HTML (Jinja2)
+│   └── __init__.py       # Inicialización de la app
+├── models/               # Modelos entrenados o scripts relacionados
+├── scripts/              # Scripts de entrenamiento, análisis, etc.
+├── .env                  # Variables de entorno (no subir a Git)
+├── requirements.txt      # Dependencias del proyecto
+├── README.md             # Documentación del proyecto
+└── main.py               # Punto de entrada principal
+```
 ## 🌐 Backend: Requisitos y Ejecución
 
 La carpeta `backend/` contiene el servidor Flask (`app.py`) y el modelo `yolov8n.pt`.
