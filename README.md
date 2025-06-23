@@ -29,7 +29,7 @@
 
 ## 📌 Descripción Breve
 
-> 📷imgen tomada ➜ 🧠procesada ➜ 📝lsita de ingredientes
+> 📷imagen tomada ➜ 🧠procesada ➜ 📝lista de ingredientes
 > 📝porsion para una persona➜🥗 Receta saludable + 🍳 Receta tradicional
 
 Con solo tomar una foto,la appidentifica los alimentos, calcula las porciones y calorías, y te sugiere 2 tipos de recetas personalizadas en cuestión de segundos. Ideal para usuarios preocupados por su nutrición, estudiantes, y aplicaciones educativas o médicas.
