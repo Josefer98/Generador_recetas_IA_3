@@ -46,7 +46,7 @@ Con solo tomar una foto,la appidentifica los alimentos, calcula las porciones y 
 es un software basado en inteligencia artificial que reconoce alimentos mediante imágenes capturadas por un dispositivo móvil, estima su volumen y contenido calórico, y genera automáticamente dos tipos de recetas: una saludable y una tradicional. Este proyecto combina visión por computadora, estimación volumétrica y procesamiento de lenguaje natural para ofrecer una herramienta innovadora en el ámbito de la nutrición personalizada.
 
 <p>
-  <img src="recursos/flujo.png" alt="flujo" width="500" height="500"/>
+  <img src="recursos/flujo.png" alt="flujo" width="700" height="500"/>
 </p>
 
 ## 🧠 Tecnologías y Modelos Utilizados
@@ -142,7 +142,7 @@ python app.py
 ```
 copia la ip generada para que el cliente se pueda conectar 
 <p>
-  <img src="recursos/ipserver.png" alt="ip" width="500" height="500"/>
+  <img src="recursos/ipserver.png" alt="ip" width="700" height="500"/>
 </p>
 
 ## 📱 Aplicación Móvil: Requisitos y Ejecución
@@ -164,7 +164,7 @@ flutter pub get
 ```
 recuerda tener o cambiar el la ip de el servidor
 <p>
-  <img src="recursos/cliip.png" alt="ipcli" width="500" height="500"/>
+  <img src="recursos/cliip.png" alt="ipcli" width="700" height="500"/>
 </p>
 
 ejecuta para correr la aplicación
