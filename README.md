@@ -29,8 +29,7 @@
 
 ## 📌 Descripción Breve
 
-> 📷imagen tomada ➜ 🧠procesada ➜ 📝lista de ingredientes
-> 📝porsion para una persona➜🥗 Receta saludable + 🍳 Receta tradicional
+> 📷imagen tomada ➜ 🧠procesada ➜ 📝lista de ingredientes➜📝porsion para una persona➜🥗 Receta saludable + 🍳 Receta tradicional
 
 Con solo tomar una foto,la appidentifica los alimentos, calcula las porciones y calorías, y te sugiere 2 tipos de recetas personalizadas en cuestión de segundos. Ideal para usuarios preocupados por su nutrición, estudiantes, y aplicaciones educativas o médicas.
 
@@ -62,5 +61,36 @@ es un software basado en inteligencia artificial que reconoce alimentos mediante
 - Generación de dos recetas: saludable y tradicional.
 - Visualización inmediata de resultados en la app.
 
+## 🧠 Entrenamiento y Calibración (Google Colab)
+- El modelo YOLOv8n fue entrenado en **Google Colab** usando Roboflow para procesamiento y dataset (36,000 imágenes / 15 clases).
+- Se utilizó `Ultralytics` para entrenamiento, alcanzando un 86 % de precisión.
+- Se guardó el modelo como `yolov8n.pt` para ser usado en el backend Flask.
 
+### 📏 Calibración con Depth Anything
 
+- También en Colab, se usó Depth Anything sobre las imágenes procesadas por YOLO para estimar el volumen de cada alimento segmentado.
+- A partir de la estimación de profundidad monocular, se calcularon porciones y calorías usando tablas nutricionales estáticas.
+
+Ambos notebooks estarán disponibles en la carpeta `/docs/`.
+
+## 🌐 Backend: Requisitos y Ejecución
+
+La carpeta `backend/` contiene el servidor Flask (`app.py`) y el modelo `yolov8n.pt`.
+
+### 📦 Requisitos
+flask==2.3.3
+python-dotenv==1.0.1
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics==8.0.176
+opencv-python==4.9.0.80
+numpy==1.26.4
+Pillow==10.2.0
+transformers==4.41.1
+diffusers==0.27.2
+scikit-image==0.22.0
+tqdm==4.66.4
+requests==2.31.0
+matplotlib==3.8.4
+scipy==1.13.1
+openai==1.30.1
