@@ -94,3 +94,35 @@ requests==2.31.0
 matplotlib==3.8.4
 scipy==1.13.1
 openai==1.30.1
+### Instalaciones Necesarias 
+🧰 Comandos de instalación por librería
+🟦 Flask (servidor web)
+```bash
+pip install flask==2.3.3
+pip install python-dotenv==1.0.1
+pip install ultralytics==8.0.176
+pip install opencv-python==4.9.0.80
+pip install Pillow==10.2.0
+pip install transformers==4.41.1
+pip install diffusers==0.27.2
+pip install requests==2.31.0
+pip install scipy==1.13.1
+pip install openai==1.30.1
+```
+#Estrura de carpetas
+
+📁 SmartRecipeAI/
+├── backend/               # Servidor Flask
+│   ├── app.py             # Código principal del servidor
+│   ├── yolov8n.pt         # Modelo entrenado YOLOv8
+│   ├── .env               # Claves de entorno
+│   ├── requirements.txt   # Librerías necesarias
+│   └── ...
+├── mobile_app/            # Aplicación Flutter
+│   ├── lib/
+│   ├── android/
+│   └── pubspec.yaml
+├── docs/                  # Notebooks en Colab
+│   ├── entrenamiento_yolo.ipynb
+│   └── calibracion_depth.ipynb
+└── README.md              # Este archivo
