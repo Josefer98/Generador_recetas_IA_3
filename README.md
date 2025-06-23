@@ -45,6 +45,10 @@ Con solo tomar una foto,la appidentifica los alimentos, calcula las porciones y 
 
 es un software basado en inteligencia artificial que reconoce alimentos mediante imágenes capturadas por un dispositivo móvil, estima su volumen y contenido calórico, y genera automáticamente dos tipos de recetas: una saludable y una tradicional. Este proyecto combina visión por computadora, estimación volumétrica y procesamiento de lenguaje natural para ofrecer una herramienta innovadora en el ámbito de la nutrición personalizada.
 
+<p>
+  <img src="recursos/pruebamodulos.png" alt="Pruebas" width="700" height="300"/>
+</p>
+
 ## 🧠 Tecnologías y Modelos Utilizados
 
 - **YOLOv8n-seg** – Detección y segmentación de alimentos.
@@ -66,13 +70,13 @@ es un software basado en inteligencia artificial que reconoce alimentos mediante
 - Se utilizó `Ultralytics` para entrenamiento, alcanzando un 86 % de precisión.
 - Se guardó el modelo como `yolov8n.pt` para ser usado en el backend Flask.
 
-### 📏 Calibración con Depth Anything
+## 📏 Calibración con Depth Anything
 
 - También en Colab, se usó Depth Anything sobre las imágenes procesadas por YOLO para estimar el volumen de cada alimento segmentado.
 - A partir de la estimación de profundidad monocular, se calcularon porciones y calorías usando tablas nutricionales estáticas.
 
 Ambos notebooks estarán disponibles en la carpeta `/docs/`.
-### 📁  Estructura de Carpetas 
+## 📁  Estructura de Carpetas 
 ```plaintext
 📁 SmartRecipeAI/
 ├── backend/               # Servidor Flask
@@ -126,17 +130,20 @@ pip install requests==2.31.0
 pip install scipy==1.13.1
 pip install openai==1.30.1
 ```
-### Posteriormente instala un entorno virtual en la caperta donde quieras ejecutar el Servidor
+Posteriormente instala un entorno virtual en la caperta donde quieras ejecutar el Servidor
 ```bash
 python -m venv venv
 ```
-### reuerda generar tu api key en https://platform.openai.com/docs/overview
-### crea un archivo .env donde se guardo la carpeta de el servidor y copia tu api key generada
-### ejecuta el servidor 
+reuerda generar tu api key en https://platform.openai.com/docs/overview
+crea un archivo .env donde se guardo la carpeta de el servidor y copia tu api key generada
+ejecuta el servidor 
 ```bash
 python app.py
 ```
-### copia la ip generada para que el cliente se pueda conectar 
+copia la ip generada para que el cliente se pueda conectar 
+<p>
+  <img src="recursos/pruebamodulos.png" alt="Pruebas" width="700" height="300"/>
+</p>
 
 ## 📱 Aplicación Móvil: Requisitos y Ejecución
 La carpeta aplicaionmovil/ contiene la app Flutter que interactúa con el servidor Flask.
@@ -146,16 +153,27 @@ La carpeta aplicaionmovil/ contiene la app Flutter que interactúa con el servid
 -Android Studio o dispositivo Android
 -Conexión al servidor Flask local
 ### 📦 Instalaciones y ejecucion 
-### recuerda verificar si tienes todo instalado ejecutando esto en la carpeta
+
+Recuerda verificar si tienes todo instalado ejecutando esto en la carpeta
 ```bash
 flutter doctor
 ```
-### posteriormente ejecutar
+ posteriormente ejecutar
 ```bash
 flutter pub get
 ```
-### recuerda tener o cambiar el la ip de el servidor
-### ejecuta para correr la aplicación
+recuerda tener o cambiar el la ip de el servidor
+<p>
+  <img src="recursos/pruebamodulos.png" alt="Pruebas" width="700" height="300"/>
+</p>
+
+ejecuta para correr la aplicación
+
 ```bash
 flutter run
 ```
+
+## Demostracion
+<p>
+  <img src="recursos/pruebamodulos.png" alt="Pruebas" width="700" height="300"/>
+</p>
